@@ -87,6 +87,10 @@ This React Native application is a movie browsing app inspired by Netflix's UI. 
   
 </div>
 
+## demo App Link
+
+[Download the .apk file](https://drive.google.com/file/d/1it1Wpt6uniRRzOvLrJpQRSHMXpobrT-6/view?usp=sharing)
+
 ## Video Demo
 
 ![Video Demo](./src/assets/screenshots/demo_video.mp4)
