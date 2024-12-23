@@ -1,79 +1,93 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Movie App
 
-# Getting Started
+This React Native application is a movie browsing app inspired by Netflix's UI. It includes the following features:
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+- Splash Screen
+- Home Screen
+- Search Screen
+- Details Screen
 
-## Step 1: Start the Metro Server
+## Features
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### Splash Screen
+- Displays a Netflix Animation.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Home Screen
+- Fetches and displays a list of movies using the API endpoint: `https://api.tvmaze.com/search/shows?q=all`.
+- Each movie includes:
+  - Thumbnail image
+  - Title
+  - Summary
+- Clicking on any movie redirects to the **Details Screen**.
+- A search bar at the top redirects to the **Search Screen** when clicked.
 
-```bash
-# using npm
-npm start
+### Search Screen
+- Includes a search bar to search for movies.
+- Fetches and displays search results using the API endpoint: `https://api.tvmaze.com/search/shows?q=${search_term}`.
+- Displays search results in the same format as the **Home Screen**.
 
-# OR using Yarn
-yarn start
-```
+### Details Screen
+- Displays detailed information about a selected movie:
+  - Image
+  - Title
+  - Summary
+  - Other available details from the API response.
 
-## Step 2: Start your Application
+### Navigation
+- Includes a bottom navigation bar to switch between the **Home Screen** and the **Search Screen**.
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+## Technologies Used
+- React Native CLI
+- JavaScript
+- Axios (for API requests)
 
-### For Android
+## How to Run the App
 
-```bash
-# using npm
-npm run android
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/shivrajkadam19/quadb_task_1.git
+   cd quadb_task_1
+   ```
 
-# OR using Yarn
-yarn android
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### For iOS
+3. **Run the app**
+   - For Android:
+     ```bash
+     npx react-native run-android
+     ```
 
-```bash
-# using npm
-npm run ios
+## Folder Structure
+- **assets/**: Contains the splash screen image and other static assets.
+- **components/**: Reusable components for the app.
+- **screens/**: Contains all the screen components (Splash, Home, Search, Details).
+- **navigation/**: Manages bottom navigation and screen transitions.
+- **utils/**: Utility functions (e.g., API requests).
 
-# OR using Yarn
-yarn ios
-```
+## APIs Used
+- Fetch all movies: `https://api.tvmaze.com/search/shows?q=all`
+- Search movies: `https://api.tvmaze.com/search/shows?q=${search_term}`
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Screenshots
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Splash Screen
+![Splash Screen](./src/assets/screenshots/splash_screen.jpg)
 
-## Step 3: Modifying your App
+### Home Screen
+![Home Screen](./src/assets/screenshots/home_screen.jpg)
 
-Now that you have successfully run the app, let's modify it.
+### Search Screen
+![Search Screen](./src/assets/screenshots/search_screen.jpg)
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+### Details Screen
+![Details Screen](./src/assets/screenshots/details_screen.jpg)
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+## License
+This project is licensed under the MIT License.
 
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Submission
+Submit the project via the form provided:
+[Google Form Link](https://docs.google.com/forms/d/e/1FAIpQLSeQ-9PffLbFkzTFfNNv6SqmlyKhV8OT5TJVkPiHBOq9G1-YTQ/viewform)
