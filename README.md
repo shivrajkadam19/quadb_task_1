@@ -90,7 +90,8 @@ This React Native application is a movie browsing app inspired by Netflix's UI. 
 ## Video Demo
 
 <div style="display: flex; flex-direction: row; justify-content: center;">
-  <video width="600" controls>
+  <video width="300" controls>
+    <source src="./src/assets/screenshots/demo_video.mp4" type="video/mp4">
     <source src="./src/assets/screenshots/demo_video.mp4" type="video/mp4">
   </video>
 </div>
